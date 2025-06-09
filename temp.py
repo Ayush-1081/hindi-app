@@ -13,17 +13,17 @@ st.title("📚 Hindi Book Chat with Gemini 2.0 Flash")
 
 # --- Path to all chapter PDFs ---
 chapter_paths = {
-    "Chapter 1": "chapters/ch1.pdf",
-    "Chapter 2": "chapters/ch2.pdf",
-    "Chapter 3": "chapters/ch3.pdf",
-    "Chapter 4": "chapters/ch4.pdf",
-    "Chapter 5": "chapters/ch5.pdf",
-    "Chapter 6": "chapters/ch6.pdf",
-    "Chapter 7": "chapters/ch7.pdf",
-    "Chapter 8": "chapters/ch8.pdf",
-    "Chapter 9": "chapters/ch9.pdf",
-    "Chapter 10": "chapters/ch10.pdf",
-    "Chapter 11": "chapters/ch11.pdf",
+    "Chapter 1: उड़ चल, हारिल": "chapters/ch1.pdf",
+    "Chapter 2: डिनर": "chapters/ch2.pdf",
+    "Chapter 3: नाम चर्चा": "chapters/ch3.pdf",
+    "Chapter 4: मेरी स्मृति": "chapters/ch4.pdf",
+    "Chapter 5: भाषा का प्रश्न": "chapters/ch5.pdf",
+    "Chapter 6: दो संस्मरण": "chapters/ch6.pdf",
+    "Chapter 7: हिम": "chapters/ch7.pdf",
+    "Chapter 8: प्रण": "chapters/ch8.pdf",
+    "Chapter 9: ब्रजवासी": "chapters/ch9.pdf",
+    "Chapter 10: गुरुदेव का घर": "chapters/ch10.pdf",
+    "Chapter 11: दो लघुकथाएँ": "chapters/ch11.pdf",
 }
 
 # --- Select chapter ---
