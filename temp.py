@@ -27,7 +27,16 @@ chapter_paths = {
 }
 
 # --- Select chapter ---
-selected_chapter = st.selectbox("अध्याय चुनें (Select a Chapter)", list(chapter_paths.keys()))
+chapter_names = list(chapter_paths.keys())
+selected_chapter = st.selectbox(
+    "🔍 अध्याय चुनें (Search & Select a Chapter)",
+    chapter_names,
+    index=chapter_names.index(st.session_state.get("current_chapter", chapter_names[0]))  # pre-select if previously selected
+)
+
+# Show selected chapter clearly
+st.info(f"📘 आपने चयन किया है: **{selected_chapter}**")
+
 chapter_file_path = pathlib.Path(chapter_paths[selected_chapter])
 
 if chapter_file_path.exists():
