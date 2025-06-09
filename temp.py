@@ -26,22 +26,14 @@ chapter_paths = {
     "Chapter 11: दो लघुकथाएँ": "chapters/ch11.pdf",
 }
 
-# --- Select chapter ---
-chapter_names = list(chapter_paths.keys())
-selected_chapter = st.selectbox(
-    "🔍 अध्याय चुनें (Search & Select a Chapter)",
-    chapter_names,
-    index=chapter_names.index(st.session_state.get("current_chapter", chapter_names[0]))  # pre-select if previously selected
-)
-
-# Show selected chapter clearly
-st.info(f"📘 आपने चयन किया है: **{selected_chapter}**")
-
+# --- Select chapter with full name display ---
+selected_chapter = st.selectbox("अध्याय चुनें (Select a Chapter)", list(chapter_paths.keys()))
 chapter_file_path = pathlib.Path(chapter_paths[selected_chapter])
 
 if chapter_file_path.exists():
-    st.success(f"📄 चयनित PDF: {chapter_file_path.name}")
+    st.success(f"📄 चयनित अध्याय: {selected_chapter}")
 
+    # Upload to Gemini if new chapter or not uploaded before
     if 'uploaded_file_id' not in st.session_state or st.session_state.get("current_chapter") != selected_chapter:
         with st.spinner(f"📤 {selected_chapter} को Gemini को भेजा जा रहा है..."):
             uploaded_file_obj = client.files.upload(file=chapter_file_path)
